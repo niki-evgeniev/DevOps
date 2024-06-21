@@ -194,23 +194,23 @@ test ('Test login with an empty fields', async({page}) => {
     expect(page.url()).toBe('http://localhost:3000/login');
 
 });
-                // TO REGISTER NEW USER
+                TO REGISTER NEW USER
 
-// test ('Test Register with valid username and password', async({page}) => {
+test ('Test Register with valid username and password', async({page}) => {
 
-//     await page.goto("http://localhost:3000/register");
-//     await page.fill('input[name="email"]', 'test1@abv.bg');
-//     await page.fill('input[name="password"]', '123456');
-//     await page.fill('#register-form > fieldset > p:nth-child(4) > label', '123456');
+    await page.goto("http://localhost:3000/register");
+    await page.fill('input[name="email"]', 'test1@abv.bg');
+    await page.fill('input[name="password"]', '123456');
+    await page.fill('#register-form > fieldset > p:nth-child(4) > label', '123456');
 
-//     let submitToLogin = await page.$('input[type="submit"]');
-//     await submitToLogin.click();
+    let submitToLogin = await page.$('input[type="submit"]');
+    await submitToLogin.click();
 
-//     let addBookButton = await page.$('a[href="/login"]');
+    let addBookButton = await page.$('a[href="/login"]');
 
-//     expect(page.url()).toBe('http://localhost:3000/catalog');
+    expect(page.url()).toBe('http://localhost:3000/catalog');
 
-// });
+});
 
 test ('Test Register with an empty fields', async({page}) => {
 
@@ -251,13 +251,12 @@ test ('Test Register with an empty email and valid password', async({page}) => {
     expect(page.url()).toBe('http://localhost:3000/register');
 
 });
-
+ 
 test ('Test Register with an empty password and valid email', async({page}) => {
 
     await page.goto("http://localhost:3000/register");
     await page.fill('input[name="email"]', 'testValid@abv.bg');
 
-    
     let submitToLogin = await page.$('input[type="submit"]');
     await submitToLogin.click();
 
