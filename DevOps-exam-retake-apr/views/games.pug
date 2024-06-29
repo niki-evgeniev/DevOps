@@ -1,0 +1,8 @@
+include header.pug
+
+h1 Added Games
+ul
+  each g in games
+    li #{g.name} (#{g.rating})
+
+include footer.pug
